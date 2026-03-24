@@ -1,6 +1,6 @@
 import {sum} from './sum.js';
 
-describe('TC01 - summation', () => {
+describe('TC01 - Summation', () => {
   it('adds two positive numbers', () => {
     expect(sum(2, 3)).toBe(5);
   });
