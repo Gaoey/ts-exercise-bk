@@ -4,17 +4,33 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node src/index.ts",
+    "dev": "tsx src/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[tj]s$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "^(\\.\\.?/.*)\\.js$": "$1"
+    }
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.2",
+    "@babel/preset-typescript": "^7.28.5",
+    "@types/jest": "^30.0.0",
     "@types/node": "^25.5.0",
+    "babel-jest": "^30.3.0",
+    "jest": "^30.3.0",
     "ts-node": "^10.9.2",
+    "tsx": "^4.19.3",
     "typescript": "^6.0.2"
   }
 }
